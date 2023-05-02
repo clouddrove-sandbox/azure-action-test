@@ -9,7 +9,7 @@ on:
 jobs:
   terraform:
     name: 'Terraform'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latesthttps://github.com/clouddrove-sandbox/azure-action-test/actions
     steps:
 
       - name: 'Checkout'
@@ -34,10 +34,10 @@ jobs:
         working-directory: _test/
         run: |
           go mod init test
-          go mod tidy
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
-          ls -la
+          go mod tidy
+          go mod vendor
       
       
       - name: 'Terratest public-private-subnet'
