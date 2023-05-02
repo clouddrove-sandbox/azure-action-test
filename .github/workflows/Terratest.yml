@@ -34,6 +34,7 @@ jobs:
         working-directory: _test/
         run: |
           go mod init test
+          go mod tidy
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
       
