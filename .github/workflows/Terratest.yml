@@ -27,7 +27,7 @@ jobs:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
       - name: Download Go Modules
-        working-directory: ../../_test
+        working-directory: _test
         run: go mod download
       
       - name: 'Terratest public-private-subnet'
