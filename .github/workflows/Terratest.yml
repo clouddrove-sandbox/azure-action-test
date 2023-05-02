@@ -37,7 +37,7 @@ jobs:
           go mod tidy
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
-          go get github.com/zclconf/go-cty/cty/function/stdlib@v1.9.1
+          ls -la
       
       
       - name: 'Terratest public-private-subnet'
