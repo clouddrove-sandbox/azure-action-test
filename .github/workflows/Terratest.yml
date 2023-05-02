@@ -32,7 +32,7 @@ jobs:
       
       - name:  Install Terratest
         working-directory: _test
-        run: go get github.com/gruntwork-io/terratest/modules/terraform; go get cloud.google.com/go/storage@latest; go get github.com/stretchr/testify/assert
+        run: go mod tidy; go install github.com/gruntwork-io/terratest/modules/terraform@latest
       
       
       - name: 'Terratest public-private-subnet'
