@@ -26,6 +26,9 @@ jobs:
         env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
+      - name: Download Go Modules
+        working-directory: ../../_test
+        run: go mod download
       
       - name: 'Terratest public-private-subnet'
 #         if: ${{ github.event.label.name == 'terratest' }}
