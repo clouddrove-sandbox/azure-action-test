@@ -30,16 +30,18 @@ jobs:
 #         working-directory: _test
 #         run: go mod tidy
       
-#       - name:  Install Terratest
-#         working-directory: _test/
-#         run: go get github.com/gruntwork-io/terratest/modules/terraform@latest
+      - name:  Install Terratest
+        working-directory: _test/
+        run: |
+          go get -v -t -d ./...
+          go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
       
       
       - name: 'Terratest public-private-subnet'
 #         if: ${{ github.event.label.name == 'terratest' }}
         uses: 'clouddrove/github-actions@v9.0.2'
         with:
-          tf_actions_subcommand: 'terratest'
+          actions_subcommand: 'terratest'
           tf_actions_working_dir: '_test'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
