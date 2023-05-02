@@ -4,11 +4,9 @@
 package test
 
 import (
-  "os"
-  "github.com/Azure/azure-sdk-for-go/profiles/latest/cosmos-db/mgmt/documentdb"
+  "testing"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"github.com/stretchr/testify/assert"
-  terraformCore "github.com/hashicorp/terraform/terraform"
 )
 
 func Test(t *testing.T) {
