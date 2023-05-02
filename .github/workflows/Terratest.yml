@@ -33,7 +33,7 @@ jobs:
       - name:  Install Terratest
         working-directory: _test/
         run: |
-          go mod tidy
+          go mod init test
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
       
