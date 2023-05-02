@@ -14,7 +14,8 @@ func Test(t *testing.T) {
 
 	terraformOptions := &terraform.Options{
 		// Source path of Terraform directory.
-		TerraformDir: "../_example",
+		TerraformDir: "../_example/default_subnet",
+    Upgrade:      true,
 	}
 
 	// This will run 'terraform init' and 'terraform application' and will fail the test if any errors occur
