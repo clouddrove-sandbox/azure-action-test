@@ -4,9 +4,12 @@
 package test
 
 import (
+  "os"
+  "path"
 	"testing"
 	"github.com/gruntwork-io/terratest/modules/terraform"
 	"github.com/stretchr/testify/assert"
+  terraformCore "github.com/hashicorp/terraform/terraform"
 )
 
 func Test(t *testing.T) {
