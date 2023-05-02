@@ -31,8 +31,8 @@ jobs:
 #         run: go mod tidy
       
       - name:  Install Terratest
-        working-directory: _test
-        run: go mod init;echo "----"; go mod tidy;echo "---"; go install github.com/gruntwork-io/terratest/modules/terraform@latest
+        working-directory: _test/
+        run: go mod init github.com/gruntwork-io/terratest/modules/terraform;echo "---"; go install github.com/gruntwork-io/terratest/modules/terraform@latest
       
       
       - name: 'Terratest public-private-subnet'
