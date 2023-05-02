@@ -19,12 +19,6 @@ jobs:
         env:
               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
               
-      - name: CMD Script
-        uses: actions/github-script@v6
-        id: set-result
-        with:
-          script: go get github.com/gruntwork-io/terratest/modules/terraform
-              
       
       - name: 'Terratest public-private-subnet'
 #         if: ${{ github.event.label.name == 'terratest' }}
