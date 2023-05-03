@@ -37,7 +37,6 @@ jobs:
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
           go mod tidy
-          go mod vendor
       
       
       - name: 'Terratest public-private-subnet'
