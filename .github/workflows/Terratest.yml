@@ -36,8 +36,8 @@ jobs:
           go mod init test
           go get -v -t -d ./...
           go get -v -t -d github.com/gruntwork-io/terratest/modules/terraform
-          go get -v -t -d github.com/zclconf/go-cty/cty/function/stdlib
           go mod tidy
+          go install github.com/zclconf/go-cty/cty/function/stdlib
       
       
       - name: 'Terratest public-private-subnet'
