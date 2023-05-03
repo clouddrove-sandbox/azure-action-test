@@ -9,7 +9,7 @@ on:
 jobs:
   terraform:
     name: 'Terraform'
-    runs-on: ubuntu-latesthttps://github.com/clouddrove-sandbox/azure-action-test/actions
+    runs-on: ubuntu-latest
     steps:
 
       - name: 'Checkout'
