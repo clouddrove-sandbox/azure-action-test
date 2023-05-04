@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.3] - 2023-05-04
+### :sparkles: New Features
+- [`1d7d596`](https://github.com/clouddrove-sandbox/azure-action-test/commit/1d7d596e1ee595878e87ba90015b861c2593efd3) - update CHANGELOG.MD file *(commit by [@themaheshyadav](https://github.com/themaheshyadav))*
+
+
 ## [1.0.2] - 2023-04-13
 ### :sparkles: New Features
 - [`d5a0ada`](https://github.com/clouddrove/terraform-azure-subnet/commit/994bfeaa8556857c6102db234d14710b3991b8e7) - update route table resource to create multiple rt in same vnet
@@ -21,3 +26,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://github.com/clouddrove/terraform-azure-subnet/compare/1.0.0...master
 [1.0.1]: https://github.com/clouddrove/terraform-azure-subnet/compare/1.0.0...1.0.1
 [1.0.2]: https://github.com/clouddrove/terraform-azure-subnet/compare/1.0.1...1.0.2
+
+[1.0.3]: https://github.com/clouddrove-sandbox/azure-action-test/compare/1.0.2...1.0.3
