@@ -1,7 +1,17 @@
 name: tfsec
 on:
-  pull_request:
-  workflow_dispatch:
+  workflow_call:
+    inputs:
+      working_directory:
+        description: 'Directory where main.tf exist of the module.'
+        required: false
+        type: string
+        default: './_example/'
+      github_token:
+        description: 'Github token.'
+        required: false
+        type: string
+        default: ${{ secrets.GITHUB}}
 
 jobs:
   tfsec:
@@ -16,7 +26,7 @@ jobs:
         uses: aquasecurity/tfsec-sarif-action@v0.1.0
         with:
           sarif_file: tfsec.sarif
-          working_directory: ./_example/
+          working_directory: ${{ inputs.working_directory }}
           full_repo_scan: true
           
       - name: Upload SARIF file
@@ -28,16 +38,15 @@ jobs:
       - name: tfsec commenter for PR
         uses: tfsec/tfsec-pr-commenter-action@main
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB}}
-          working_directory: ./_example/
-
+          GITHUB_TOKEN: ${{ inputs.github_token }}
+          working_directory: ${{ inputs.working_directory }}
 
       - name: 'Terraform security scan Advanced'
         uses: triat/terraform-security-scan@v3.0.3
         if: github.event_name == 'pull_request'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB}}
-          tfsec_actions_working_dir: ./_example/
+          GITHUB_TOKEN: ${{ inputs.github_token }}
+          tfsec_actions_working_dir: ${{ inputs.working_directory }}
           tfsec_actions_comment: true
           tfsec_output_format: sarif
         continue-on-error: true
