@@ -11,7 +11,7 @@ on:
         description: 'Github token.'
         required: false
         type: string
-        default: ${{ secrets.GITHUB}}
+        default: ${{ secrets.NILESH_GITHUB_TOKEN}}
 
 jobs:
   tfsec:
