@@ -7,10 +7,10 @@ on:
         required: false
         type: string
         default: './_example/'
+    secrets:
       repo_token:
         description: 'Token of the caller repo which has admin privillage'
         required: true
-        type: string
 
 jobs:
   tfsec:
