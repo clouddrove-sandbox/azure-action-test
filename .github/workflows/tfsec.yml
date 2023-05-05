@@ -37,7 +37,7 @@ jobs:
       - name: tfsec commenter for PR
         uses: tfsec/tfsec-pr-commenter-action@main
         with:
-          GITHUB_TOKEN: ${{ inputs.repo_token }}
+          github_token: ${{ inputs.repo_token }}
           working_directory: ${{ inputs.working_directory }}
 
       - name: 'Terraform security scan Advanced'
